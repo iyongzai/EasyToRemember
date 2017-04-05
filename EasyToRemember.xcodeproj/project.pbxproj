@@ -8,20 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		2F29A8531E922A780049DD46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A8521E922A780049DD46 /* AppDelegate.swift */; };
-		2F29A8551E922A780049DD46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A8541E922A780049DD46 /* ViewController.swift */; };
 		2F29A8581E922A780049DD46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F29A8561E922A780049DD46 /* Main.storyboard */; };
 		2F29A85A1E922A780049DD46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F29A8591E922A780049DD46 /* Assets.xcassets */; };
-		2F29A85D1E922A780049DD46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F29A85B1E922A780049DD46 /* LaunchScreen.storyboard */; };
+		2F29A8691E922BE10049DD46 /* ETRHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A8681E922BE10049DD46 /* ETRHomeViewController.swift */; };
+		2F29A86C1E922C760049DD46 /* ETRHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A86B1E922C760049DD46 /* ETRHomeCell.swift */; };
+		2F29A8701E9232470049DD46 /* ETRHomeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A86F1E9232470049DD46 /* ETRHomeCellModel.swift */; };
+		2F29A8721E923DE80049DD46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F29A8711E923DE80049DD46 /* LaunchScreen.storyboard */; };
+		2F29A8761E9242FA0049DD46 /* ETRAddingAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A8751E9242FA0049DD46 /* ETRAddingAccountViewController.swift */; };
+		2F29A87A1E924A8C0049DD46 /* ETRSelectingPlatformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A8791E924A8C0049DD46 /* ETRSelectingPlatformViewController.swift */; };
+		2F29A87E1E924D3A0049DD46 /* ETRAddingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A87D1E924D3A0049DD46 /* ETRAddingCell.swift */; };
+		2F29A8801E92A53E0049DD46 /* ETRPlatformCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A87F1E92A53E0049DD46 /* ETRPlatformCell.swift */; };
+		2F29A8831E92A6870049DD46 /* Extension-String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A8821E92A6870049DD46 /* Extension-String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F29A84F1E922A780049DD46 /* EasyToRemember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyToRemember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F29A8521E922A780049DD46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F29A8541E922A780049DD46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2F29A8571E922A780049DD46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F29A8591E922A780049DD46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2F29A85C1E922A780049DD46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F29A85E1E922A780049DD46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F29A8681E922BE10049DD46 /* ETRHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETRHomeViewController.swift; sourceTree = "<group>"; };
+		2F29A86B1E922C760049DD46 /* ETRHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETRHomeCell.swift; sourceTree = "<group>"; };
+		2F29A86F1E9232470049DD46 /* ETRHomeCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETRHomeCellModel.swift; sourceTree = "<group>"; };
+		2F29A8711E923DE80049DD46 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2F29A8751E9242FA0049DD46 /* ETRAddingAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETRAddingAccountViewController.swift; sourceTree = "<group>"; };
+		2F29A8791E924A8C0049DD46 /* ETRSelectingPlatformViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETRSelectingPlatformViewController.swift; sourceTree = "<group>"; };
+		2F29A87D1E924D3A0049DD46 /* ETRAddingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETRAddingCell.swift; sourceTree = "<group>"; };
+		2F29A87F1E92A53E0049DD46 /* ETRPlatformCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETRPlatformCell.swift; sourceTree = "<group>"; };
+		2F29A8821E92A6870049DD46 /* Extension-String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,69 @@
 		2F29A8511E922A780049DD46 /* EasyToRemember */ = {
 			isa = PBXGroup;
 			children = (
-				2F29A8521E922A780049DD46 /* AppDelegate.swift */,
-				2F29A8541E922A780049DD46 /* ViewController.swift */,
-				2F29A8561E922A780049DD46 /* Main.storyboard */,
-				2F29A8591E922A780049DD46 /* Assets.xcassets */,
-				2F29A85B1E922A780049DD46 /* LaunchScreen.storyboard */,
-				2F29A85E1E922A780049DD46 /* Info.plist */,
+				2F29A8811E92A66C0049DD46 /* Extension */,
+				2F29A8641E922BBE0049DD46 /* Home */,
+				2F29A86A1E922C010049DD46 /* Support */,
 			);
 			path = EasyToRemember;
+			sourceTree = "<group>";
+		};
+		2F29A8641E922BBE0049DD46 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2F29A8651E922BBE0049DD46 /* Model */,
+				2F29A8661E922BBE0049DD46 /* View */,
+				2F29A8671E922BBE0049DD46 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2F29A8651E922BBE0049DD46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F29A86F1E9232470049DD46 /* ETRHomeCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F29A8661E922BBE0049DD46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F29A86B1E922C760049DD46 /* ETRHomeCell.swift */,
+				2F29A87D1E924D3A0049DD46 /* ETRAddingCell.swift */,
+				2F29A87F1E92A53E0049DD46 /* ETRPlatformCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F29A8671E922BBE0049DD46 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F29A8681E922BE10049DD46 /* ETRHomeViewController.swift */,
+				2F29A8751E9242FA0049DD46 /* ETRAddingAccountViewController.swift */,
+				2F29A8791E924A8C0049DD46 /* ETRSelectingPlatformViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2F29A86A1E922C010049DD46 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				2F29A8521E922A780049DD46 /* AppDelegate.swift */,
+				2F29A8561E922A780049DD46 /* Main.storyboard */,
+				2F29A8591E922A780049DD46 /* Assets.xcassets */,
+				2F29A85E1E922A780049DD46 /* Info.plist */,
+				2F29A8711E923DE80049DD46 /* LaunchScreen.storyboard */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		2F29A8811E92A66C0049DD46 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2F29A8821E92A6870049DD46 /* Extension-String.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F29A85D1E922A780049DD46 /* LaunchScreen.storyboard in Resources */,
+				2F29A8721E923DE80049DD46 /* LaunchScreen.storyboard in Resources */,
 				2F29A85A1E922A780049DD46 /* Assets.xcassets in Resources */,
 				2F29A8581E922A780049DD46 /* Main.storyboard in Resources */,
 			);
@@ -136,8 +205,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F29A8551E922A780049DD46 /* ViewController.swift in Sources */,
+				2F29A8801E92A53E0049DD46 /* ETRPlatformCell.swift in Sources */,
+				2F29A8701E9232470049DD46 /* ETRHomeCellModel.swift in Sources */,
 				2F29A8531E922A780049DD46 /* AppDelegate.swift in Sources */,
+				2F29A8761E9242FA0049DD46 /* ETRAddingAccountViewController.swift in Sources */,
+				2F29A86C1E922C760049DD46 /* ETRHomeCell.swift in Sources */,
+				2F29A87E1E924D3A0049DD46 /* ETRAddingCell.swift in Sources */,
+				2F29A8691E922BE10049DD46 /* ETRHomeViewController.swift in Sources */,
+				2F29A87A1E924A8C0049DD46 /* ETRSelectingPlatformViewController.swift in Sources */,
+				2F29A8831E92A6870049DD46 /* Extension-String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,14 +226,6 @@
 				2F29A8571E922A780049DD46 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2F29A85B1E922A780049DD46 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2F29A85C1E922A780049DD46 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -301,6 +369,7 @@
 				2F29A8631E922A780049DD46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -80,6 +80,10 @@ class ETRHomeViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

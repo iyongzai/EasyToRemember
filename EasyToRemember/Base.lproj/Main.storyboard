@@ -206,7 +206,13 @@
                             <outlet property="delegate" destination="sYX-Pb-5kB" id="quV-cU-ABc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="请选择平台" id="buo-pJ-SCx"/>
+                    <navigationItem key="navigationItem" title="请选择平台" id="buo-pJ-SCx">
+                        <barButtonItem key="rightBarButtonItem" title="完成" id="isW-sn-Shb">
+                            <connections>
+                                <action selector="finishAction:" destination="sYX-Pb-5kB" id="ptX-P8-aAk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ywc-6a-E5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

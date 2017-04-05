@@ -33,6 +33,14 @@ class ETRSelectingPlatformViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func finishAction(_ sender: UIBarButtonItem) {
+        if self.finishSelectingHandle != nil {
+            self.finishSelectingHandle!(selectedPlatform)
+        }
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 
     // MARK: - Table view data source
 
@@ -50,9 +58,25 @@ class ETRSelectingPlatformViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ETRPlatformCell", for: indexPath) as! ETRPlatformCell
 
-        cell.configure(model: platforms[indexPath.row])
+        if selectedPlatform.name.length == 0 {
+            selectedPlatform = platforms.first!
+        }
+        let aModel = platforms[indexPath.row]
+        cell.configure(model: aModel)
+        if aModel.name == selectedPlatform.name {
+            cell.accessoryType = .checkmark
+            cell.tintColor = UIColor.orange
+        }else{
+            cell.accessoryType = .none
+        }
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        selectedPlatform = platforms[indexPath.row]
+        tableView.reloadData()
     }
     
 

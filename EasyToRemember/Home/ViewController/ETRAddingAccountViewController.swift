@@ -62,13 +62,19 @@ class ETRAddingAccountViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0 {
             unowned let weakSelf = self
             let vc = self.storyboard!.instantiateViewController(withIdentifier: "ETRSelectingPlatformViewController") as! ETRSelectingPlatformViewController
             vc.selectedPlatform = selectedPlatform
             vc.finishSelectingHandle = { (selectedPlatform) in
                 weakSelf.selectedPlatform = selectedPlatform
+                DispatchQueue.main.async(execute: {
+                    weakSelf.editCellModelArray[indexPath.row].placeholder = weakSelf.selectedPlatform.name
+                    weakSelf.tableView.reloadRows(at: [indexPath], with: .automatic)
+                })
             }
+            self.show(vc, sender: nil)
         }
         for cell in tableView.visibleCells {
             (cell as! ETRAddingCell).textField.resignFirstResponder()

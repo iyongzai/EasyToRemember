@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11A8051C7A9C6EE3AE9292D7 /* Pods_EasyToRemember.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2022126AF54FFE1ACDD9BDE0 /* Pods_EasyToRemember.framework */; };
 		2F29A8531E922A780049DD46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A8521E922A780049DD46 /* AppDelegate.swift */; };
 		2F29A8581E922A780049DD46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F29A8561E922A780049DD46 /* Main.storyboard */; };
 		2F29A85A1E922A780049DD46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F29A8591E922A780049DD46 /* Assets.xcassets */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2022126AF54FFE1ACDD9BDE0 /* Pods_EasyToRemember.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyToRemember.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28DB72A07420287B6EC1DF63 /* Pods-EasyToRemember.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyToRemember.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyToRemember/Pods-EasyToRemember.debug.xcconfig"; sourceTree = "<group>"; };
 		2F29A84F1E922A780049DD46 /* EasyToRemember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyToRemember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F29A8521E922A780049DD46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F29A8571E922A780049DD46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		2F29A87D1E924D3A0049DD46 /* ETRAddingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETRAddingCell.swift; sourceTree = "<group>"; };
 		2F29A87F1E92A53E0049DD46 /* ETRPlatformCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETRPlatformCell.swift; sourceTree = "<group>"; };
 		2F29A8821E92A6870049DD46 /* Extension-String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-String.swift"; sourceTree = "<group>"; };
+		F4D65AF6794B3DF9AD8B7408 /* Pods-EasyToRemember.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyToRemember.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyToRemember/Pods-EasyToRemember.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +47,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A8051C7A9C6EE3AE9292D7 /* Pods_EasyToRemember.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EC9212AB5E3DC3137B0783F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28DB72A07420287B6EC1DF63 /* Pods-EasyToRemember.debug.xcconfig */,
+				F4D65AF6794B3DF9AD8B7408 /* Pods-EasyToRemember.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2F29A8461E922A780049DD46 = {
 			isa = PBXGroup;
 			children = (
 				2F29A8511E922A780049DD46 /* EasyToRemember */,
 				2F29A8501E922A780049DD46 /* Products */,
+				1EC9212AB5E3DC3137B0783F /* Pods */,
+				EF4FF9E22A2F841D48454A35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +149,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		EF4FF9E22A2F841D48454A35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2022126AF54FFE1ACDD9BDE0 /* Pods_EasyToRemember.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,9 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F29A8611E922A780049DD46 /* Build configuration list for PBXNativeTarget "EasyToRemember" */;
 			buildPhases = (
+				06815D56B5D59DFB37FCAF9A /* [CP] Check Pods Manifest.lock */,
 				2F29A84B1E922A780049DD46 /* Sources */,
 				2F29A84C1E922A780049DD46 /* Frameworks */,
 				2F29A84D1E922A780049DD46 /* Resources */,
+				97D51204678729EBD29AAB19 /* [CP] Embed Pods Frameworks */,
+				B64E4E6ACF902A31C5199596 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,6 +226,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06815D56B5D59DFB37FCAF9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		97D51204678729EBD29AAB19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyToRemember/Pods-EasyToRemember-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B64E4E6ACF902A31C5199596 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyToRemember/Pods-EasyToRemember-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F29A84B1E922A780049DD46 /* Sources */ = {
@@ -328,6 +403,7 @@
 		};
 		2F29A8621E922A780049DD46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28DB72A07420287B6EC1DF63 /* Pods-EasyToRemember.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EasyToRemember/Info.plist;
@@ -340,6 +416,7 @@
 		};
 		2F29A8631E922A780049DD46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4D65AF6794B3DF9AD8B7408 /* Pods-EasyToRemember.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EasyToRemember/Info.plist;

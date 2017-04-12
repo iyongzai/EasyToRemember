@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ETRAddingAccountViewController: UITableViewController {
     
     fileprivate var editCellModelArray = [EditModel]()
-    fileprivate var selectedPlatform = PlatformModel.init(name: "", icon: "")
+    fileprivate var selectedPlatform = PlatformModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +39,26 @@ class ETRAddingAccountViewController: UITableViewController {
     }
     
     @IBAction func done(_ sender: UIBarButtonItem) {
-        
+        selectedPlatform.userName = (tableView.visibleCells[1] as! ETRAddingCell).textField.text ?? ""
+        selectedPlatform.password = (tableView.visibleCells[2] as! ETRAddingCell).textField.text ?? ""
+        if selectedPlatform.name.length == 0 {
+            print("请选择平台")
+            return
+        }
+        if selectedPlatform.userName.length == 0 {
+            print("请输入账号")
+            return
+        }
+        if selectedPlatform.password.length == 0 {
+            print("请输入密码")
+            return
+        }
+        //存储到数据库
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(selectedPlatform)
+        }
+        print("添加成功")
     }
     
 
@@ -58,6 +78,14 @@ class ETRAddingAccountViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ETRAddingCell", for: indexPath) as! ETRAddingCell
         cell.configure(model: editCellModelArray[indexPath.row])
+        if indexPath.row == 0 {
+            cell.textField.text = selectedPlatform.name
+        }
+        if indexPath.row == 2 {
+            cell.textField.isSecureTextEntry = true
+        }else{
+            cell.textField.isSecureTextEntry = false
+        }
         return cell
     }
     
@@ -68,9 +96,9 @@ class ETRAddingAccountViewController: UITableViewController {
             let vc = self.storyboard!.instantiateViewController(withIdentifier: "ETRSelectingPlatformViewController") as! ETRSelectingPlatformViewController
             vc.selectedPlatform = selectedPlatform
             vc.finishSelectingHandle = { (selectedPlatform) in
-                weakSelf.selectedPlatform = selectedPlatform
+                weakSelf.selectedPlatform.name = selectedPlatform.name
+                weakSelf.selectedPlatform.icon = selectedPlatform.icon
                 DispatchQueue.main.async(execute: {
-                    weakSelf.editCellModelArray[indexPath.row].placeholder = weakSelf.selectedPlatform.name
                     weakSelf.tableView.reloadRows(at: [indexPath], with: .automatic)
                 })
             }

@@ -10,7 +10,7 @@ import UIKit
 
 class ETRSelectingPlatformViewController: UITableViewController {
     
-    var selectedPlatform = PlatformModel.init(name: "", icon: "")
+    var selectedPlatform = PlatformModel.init()
     var finishSelectingHandle: ((_ selectedPlatform: PlatformModel) -> Void)?
     fileprivate var platforms = [PlatformModel]()
 
@@ -23,9 +23,10 @@ class ETRSelectingPlatformViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        let platformModel1 = PlatformModel.init(name: "微信", icon: "icon_sns_weixin_session")
-        let platformModel2 = PlatformModel.init(name: "微博", icon: "icon_sns_weibo")
-        let platformModel3 = PlatformModel.init(name: "QQ", icon: "icon_sns_qq")
+        let platformModel1 = PlatformModel().configure(name: "微信", icon: "icon_sns_weixin_session", userName: "", password: "")
+        
+        let platformModel2 = PlatformModel().configure(name: "微博", icon: "icon_sns_weibo", userName: "", password: "")
+        let platformModel3 = PlatformModel().configure(name: "QQ", icon: "icon_sns_qq", userName: "", password: "")
         platforms.append(contentsOf: [platformModel1, platformModel2, platformModel3])
     }
 

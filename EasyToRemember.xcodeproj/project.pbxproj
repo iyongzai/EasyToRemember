@@ -20,6 +20,7 @@
 		2F29A87E1E924D3A0049DD46 /* ETRAddingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A87D1E924D3A0049DD46 /* ETRAddingCell.swift */; };
 		2F29A8801E92A53E0049DD46 /* ETRPlatformCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A87F1E92A53E0049DD46 /* ETRPlatformCell.swift */; };
 		2F29A8831E92A6870049DD46 /* Extension-String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A8821E92A6870049DD46 /* Extension-String.swift */; };
+		2F53B66A1E98DEA9007E4CF7 /* Extension-UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53B6691E98DEA9007E4CF7 /* Extension-UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		2F29A87D1E924D3A0049DD46 /* ETRAddingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETRAddingCell.swift; sourceTree = "<group>"; };
 		2F29A87F1E92A53E0049DD46 /* ETRPlatformCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETRPlatformCell.swift; sourceTree = "<group>"; };
 		2F29A8821E92A6870049DD46 /* Extension-String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-String.swift"; sourceTree = "<group>"; };
+		2F53B6691E98DEA9007E4CF7 /* Extension-UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-UIColor.swift"; sourceTree = "<group>"; };
 		F4D65AF6794B3DF9AD8B7408 /* Pods-EasyToRemember.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyToRemember.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyToRemember/Pods-EasyToRemember.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				2F29A8821E92A6870049DD46 /* Extension-String.swift */,
+				2F53B6691E98DEA9007E4CF7 /* Extension-UIColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -240,7 +243,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		97D51204678729EBD29AAB19 /* [CP] Embed Pods Frameworks */ = {
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F29A8801E92A53E0049DD46 /* ETRPlatformCell.swift in Sources */,
+				2F53B66A1E98DEA9007E4CF7 /* Extension-UIColor.swift in Sources */,
 				2F29A8701E9232470049DD46 /* ETRHomeCellModel.swift in Sources */,
 				2F29A8531E922A780049DD46 /* AppDelegate.swift in Sources */,
 				2F29A8761E9242FA0049DD46 /* ETRAddingAccountViewController.swift in Sources */,

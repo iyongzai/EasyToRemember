@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ETRHomeViewController: UITableViewController {
     
@@ -21,37 +22,24 @@ class ETRHomeViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        tableView.backgroundColor = UIColor(hexColor: "#efeff4")
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         self.loadAllLocalData()
     }
     
     func loadAllLocalData() -> Void {
-        self.makeData()
-    }
-    
-    //制造假数据
-    func makeData() -> Void {
-        for _ in 0..<20 {
-            var aModel = ETRHomeCellModel.init(platformIcon: "", platformTitle: "", platformCount: 1)
-            
-            let randNumber = arc4random_uniform(3)
-            switch randNumber {
-            case 0:
-                aModel.platformIcon = "icon_sns_weixin_session"
-                aModel.platformTitle = "微信"
-                aModel.platformCount = 1
-            case 1:
-                aModel.platformIcon = "icon_sns_weibo"
-                aModel.platformTitle = "微博"
-                aModel.platformCount = 2
-            case 2:
-                aModel.platformIcon = "icon_sns_qq"
-                aModel.platformTitle = "QQ"
-                aModel.platformCount = 1
-            default:
-                break
-            }
-            homeModelArray.append(aModel)
+        homeModelArray.removeAll()
+        let realm = try! Realm()
+        let result = realm.objects(PlatformModel.self)
+        for elem in result {
+            homeModelArray.append(ETRHomeCellModel.init(platformIcon: elem.icon, platformTitle: elem.name, platformCount: 1))
         }
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

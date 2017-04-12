@@ -7,14 +7,28 @@
 //
 
 import UIKit
+import RealmSwift
+import Realm
 
-struct PlatformModel {
-    var name = ""
-    var icon = ""
+class PlatformModel: Object {
+    dynamic var name = ""
+    dynamic var icon = ""
+    dynamic var userName = ""
+    dynamic var password = ""
     
-    init(name: String, icon: String) {
+    func configure(name: String, icon: String, userName: String, password: String) -> PlatformModel {
         self.name = name
         self.icon = icon
+        self.userName = userName
+        self.password = password
+        
+        return self
+    }
+    func update(newPlatformModel: PlatformModel) -> Void {
+        self.name = newPlatformModel.name
+        self.icon = newPlatformModel.icon
+        self.userName = newPlatformModel.userName
+        self.password = newPlatformModel.password
     }
 }
 

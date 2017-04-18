@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Realm
 
 class ETRHomeViewController: UITableViewController {
     
@@ -34,11 +35,26 @@ class ETRHomeViewController: UITableViewController {
     
     func loadAllLocalData() -> Void {
         homeModelArray.removeAll()
+        
         let realm = try! Realm()
         let result = realm.objects(PlatformModel.self)
+        
         for elem in result {
-            homeModelArray.append(ETRHomeCellModel.init(platformIcon: elem.icon, platformTitle: elem.name, platformCount: 1))
+            var exist = false
+            for elem1 in homeModelArray {
+                if let first = elem1.platformModels.first, elem.name == first.name {
+                    elem1.platformModels.append(elem)
+                    exist = true
+                    break
+                }
+            }
+            if !exist {
+                let aHomeModel = ETRHomeCellModel.init()
+                aHomeModel.platformModels.append(elem)
+                homeModelArray.append(aHomeModel)
+            }
         }
+        
         tableView.reloadData()
     }
 
@@ -70,6 +86,12 @@ class ETRHomeViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row < homeModelArray.count {
+            if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ETRPlatformAccountDetailViewController") as? ETRPlatformAccountDetailViewController {
+                nextVC.currentModel = homeModelArray[indexPath.row]
+                self.show(nextVC, sender: nil)
+            }
+        }
     }
     
 

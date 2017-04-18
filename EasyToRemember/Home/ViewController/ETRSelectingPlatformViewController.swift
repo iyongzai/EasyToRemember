@@ -23,10 +23,10 @@ class ETRSelectingPlatformViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        let platformModel1 = PlatformModel().configure(name: "微信", icon: "icon_sns_weixin_session", userName: "", password: "")
+        let platformModel1 = PlatformModel().configure(name: "微信", icon: "icon_sns_weixin_session", userName: "", password: "", createAt: nil)
         
-        let platformModel2 = PlatformModel().configure(name: "微博", icon: "icon_sns_weibo", userName: "", password: "")
-        let platformModel3 = PlatformModel().configure(name: "QQ", icon: "icon_sns_qq", userName: "", password: "")
+        let platformModel2 = PlatformModel().configure(name: "微博", icon: "icon_sns_weibo", userName: "", password: "", createAt: nil)
+        let platformModel3 = PlatformModel().configure(name: "QQ", icon: "icon_sns_qq", userName: "", password: "", createAt: nil)
         platforms.append(contentsOf: [platformModel1, platformModel2, platformModel3])
     }
 

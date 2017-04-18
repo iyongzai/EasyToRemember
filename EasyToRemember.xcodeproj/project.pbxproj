@@ -21,6 +21,8 @@
 		2F29A8801E92A53E0049DD46 /* ETRPlatformCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A87F1E92A53E0049DD46 /* ETRPlatformCell.swift */; };
 		2F29A8831E92A6870049DD46 /* Extension-String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29A8821E92A6870049DD46 /* Extension-String.swift */; };
 		2F53B66A1E98DEA9007E4CF7 /* Extension-UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53B6691E98DEA9007E4CF7 /* Extension-UIColor.swift */; };
+		8E25AF801EA4A9B20013E93F /* ETRAccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25AF7F1EA4A9B20013E93F /* ETRAccountDetailViewController.swift */; };
+		8E25AF821EA4C1EA0013E93F /* ETRDetailPlainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25AF811EA4C1EA0013E93F /* ETRDetailPlainCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		2F29A87F1E92A53E0049DD46 /* ETRPlatformCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETRPlatformCell.swift; sourceTree = "<group>"; };
 		2F29A8821E92A6870049DD46 /* Extension-String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-String.swift"; sourceTree = "<group>"; };
 		2F53B6691E98DEA9007E4CF7 /* Extension-UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-UIColor.swift"; sourceTree = "<group>"; };
+		8E25AF7F1EA4A9B20013E93F /* ETRAccountDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETRAccountDetailViewController.swift; sourceTree = "<group>"; };
+		8E25AF811EA4C1EA0013E93F /* ETRDetailPlainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETRDetailPlainCell.swift; sourceTree = "<group>"; };
 		F4D65AF6794B3DF9AD8B7408 /* Pods-EasyToRemember.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyToRemember.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyToRemember/Pods-EasyToRemember.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +121,7 @@
 				2F29A86B1E922C760049DD46 /* ETRHomeCell.swift */,
 				2F29A87D1E924D3A0049DD46 /* ETRAddingCell.swift */,
 				2F29A87F1E92A53E0049DD46 /* ETRPlatformCell.swift */,
+				8E25AF811EA4C1EA0013E93F /* ETRDetailPlainCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				2F29A8681E922BE10049DD46 /* ETRHomeViewController.swift */,
+				8E25AF7F1EA4A9B20013E93F /* ETRAccountDetailViewController.swift */,
 				2F29A8751E9242FA0049DD46 /* ETRAddingAccountViewController.swift */,
 				2F29A8791E924A8C0049DD46 /* ETRSelectingPlatformViewController.swift */,
 			);
@@ -139,6 +145,7 @@
 				2F29A8591E922A780049DD46 /* Assets.xcassets */,
 				2F29A85E1E922A780049DD46 /* Info.plist */,
 				2F29A8711E923DE80049DD46 /* LaunchScreen.storyboard */,
+				8E25AF831EA627750013E93F /* New Group */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -150,6 +157,13 @@
 				2F53B6691E98DEA9007E4CF7 /* Extension-UIColor.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8E25AF831EA627750013E93F /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		EF4FF9E22A2F841D48454A35 /* Frameworks */ = {
@@ -195,6 +209,7 @@
 				TargetAttributes = {
 					2F29A84E1E922A780049DD46 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 2V49RW4ZQK;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -284,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F29A8801E92A53E0049DD46 /* ETRPlatformCell.swift in Sources */,
+				8E25AF821EA4C1EA0013E93F /* ETRDetailPlainCell.swift in Sources */,
 				2F53B66A1E98DEA9007E4CF7 /* Extension-UIColor.swift in Sources */,
 				2F29A8701E9232470049DD46 /* ETRHomeCellModel.swift in Sources */,
 				2F29A8531E922A780049DD46 /* AppDelegate.swift in Sources */,
@@ -292,6 +308,7 @@
 				2F29A87E1E924D3A0049DD46 /* ETRAddingCell.swift in Sources */,
 				2F29A8691E922BE10049DD46 /* ETRHomeViewController.swift in Sources */,
 				2F29A87A1E924A8C0049DD46 /* ETRSelectingPlatformViewController.swift in Sources */,
+				8E25AF801EA4A9B20013E93F /* ETRAccountDetailViewController.swift in Sources */,
 				2F29A8831E92A6870049DD46 /* Extension-String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,7 +427,9 @@
 			baseConfigurationReference = 28DB72A07420287B6EC1DF63 /* Pods-EasyToRemember.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2V49RW4ZQK;
 				INFOPLIST_FILE = EasyToRemember/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = developer.ayong.EasyToRemember;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,7 +442,9 @@
 			baseConfigurationReference = F4D65AF6794B3DF9AD8B7408 /* Pods-EasyToRemember.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2V49RW4ZQK;
 				INFOPLIST_FILE = EasyToRemember/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = developer.ayong.EasyToRemember;
 				PRODUCT_NAME = "$(TARGET_NAME)";

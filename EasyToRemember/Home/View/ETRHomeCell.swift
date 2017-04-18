@@ -31,16 +31,16 @@ class ETRHomeCell: UITableViewCell {
     
     func configure(model: ETRHomeCellModel) -> Void {
         //icon
-        if model.platformIcon.hasPrefix("http") {
+        if model.platformModels.first!.icon.hasPrefix("http") {
             //读取网络图片
             //todo:读取网络图片
         }else{//本地图片
-            platformIcon.image = UIImage.init(named: model.platformIcon)
+            platformIcon.image = UIImage.init(named: model.platformModels.first!.icon)
         }
         
         //title
-        platformTitle.text = model.platformTitle
-        platformCount.text = "\(model.platformCount)个"
+        platformTitle.text = model.platformModels.first!.name
+        platformCount.text = "\(model.platformModels.count)个"
     }
 
 }

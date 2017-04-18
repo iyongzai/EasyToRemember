@@ -15,12 +15,14 @@ class PlatformModel: Object {
     dynamic var icon = ""
     dynamic var userName = ""
     dynamic var password = ""
+    dynamic var createAt: Date?
     
-    func configure(name: String, icon: String, userName: String, password: String) -> PlatformModel {
+    func configure(name: String, icon: String, userName: String, password: String, createAt: Date?) -> PlatformModel {
         self.name = name
         self.icon = icon
         self.userName = userName
         self.password = password
+        self.createAt = createAt
         
         return self
     }
@@ -29,6 +31,11 @@ class PlatformModel: Object {
         self.icon = newPlatformModel.icon
         self.userName = newPlatformModel.userName
         self.password = newPlatformModel.password
+        self.createAt = newPlatformModel.createAt
+    }
+    
+    class func property_CreateAt() -> String {
+        return "createAt"
     }
 }
 

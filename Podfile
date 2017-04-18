@@ -4,6 +4,10 @@ target 'EasyToRemember' do
 
 #    pod 'SQLite.swift', '~> 0.11.3'
     pod 'RealmSwift'
+    
+    # 日期处理
+    # Swift 里直观的日期处理。
+    pod 'Timepiece'
 
 
 end

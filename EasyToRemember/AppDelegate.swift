@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +18,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.updateRealmVersion()
+        
         return true
+    }
+    
+    private func updateRealmVersion() -> Void {
+        let configure = RLMRealmConfiguration.default()
+        if configure.schemaVersion == 0 {//兼容之前的版本
+            configure.schemaVersion = 1
+            configure.migrationBlock = {(migration, oldSchemaVersion) in
+                if oldSchemaVersion < 1 {
+                    migration.enumerateObjects(PlatformModel.className(), block: { (oldObject, newObject) in
+                        newObject?[PlatformModel.property_CreateAt()] = Date.yesterday()//之前没有createAt属性，createAt属性是后来加上去的，这里做兼容处理（不可能让用户卸载后重装）
+                    })
+                }
+            }
+        }
+        RLMRealmConfiguration.setDefault(configure)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

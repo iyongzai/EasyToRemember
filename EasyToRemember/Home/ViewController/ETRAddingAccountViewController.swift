@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Timepiece
 
 class ETRAddingAccountViewController: UITableViewController {
     
@@ -27,9 +28,11 @@ class ETRAddingAccountViewController: UITableViewController {
         let model1 = EditModel.init(text: "平台：", placeholder: "", textFieldIsEnabled: false, accessoryType: .disclosureIndicator)
         let model2 = EditModel.init(text: "账号：", placeholder: "请填写账号", textFieldIsEnabled: true, accessoryType: .none)
         let model3 = EditModel.init(text: "密码：", placeholder: "请填写密码", textFieldIsEnabled: true, accessoryType: .none)
+        let model4 = EditModel.init(text: "确认：", placeholder: "请填写确认密码", textFieldIsEnabled: true, accessoryType: .none)
         editCellModelArray.append(model1)
         editCellModelArray.append(model2)
         editCellModelArray.append(model3)
+        editCellModelArray.append(model4)
 
     }
 
@@ -41,6 +44,7 @@ class ETRAddingAccountViewController: UITableViewController {
     @IBAction func done(_ sender: UIBarButtonItem) {
         selectedPlatform.userName = (tableView.visibleCells[1] as! ETRAddingCell).textField.text ?? ""
         selectedPlatform.password = (tableView.visibleCells[2] as! ETRAddingCell).textField.text ?? ""
+        let confirmPassword = (tableView.visibleCells[3] as! ETRAddingCell).textField.text ?? ""
         if selectedPlatform.name.length == 0 {
             print("请选择平台")
             return
@@ -53,12 +57,22 @@ class ETRAddingAccountViewController: UITableViewController {
             print("请输入密码")
             return
         }
+        if confirmPassword.length == 0 {
+            print("请输入确认密码")
+            return
+        }
+        if confirmPassword != selectedPlatform.password {
+            print("两次输入的密码不一致")
+            return
+        }
         //存储到数据库
         let realm = try! Realm()
         try! realm.write {
+            selectedPlatform.createAt = Date.today()
             realm.add(selectedPlatform)
         }
         print("添加成功")
+        self.navigationController?.popViewController(animated: true)
     }
     
 
@@ -81,7 +95,7 @@ class ETRAddingAccountViewController: UITableViewController {
         if indexPath.row == 0 {
             cell.textField.text = selectedPlatform.name
         }
-        if indexPath.row == 2 {
+        if indexPath.row == 2 || indexPath.row == 3 {
             cell.textField.isSecureTextEntry = true
         }else{
             cell.textField.isSecureTextEntry = false

@@ -263,6 +263,7 @@
                                         <constraint firstItem="CCe-yl-gtS" firstAttribute="leading" secondItem="Ugm-ip-FMf" secondAttribute="leading" constant="8" id="y6U-pC-RFT"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="icon" destination="CCe-yl-gtS" id="sNr-mU-nfl"/>
                                     <outlet property="nameLabel" destination="wdg-Mo-4Xu" id="MyS-wV-iQb"/>

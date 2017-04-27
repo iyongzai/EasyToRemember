@@ -66,7 +66,7 @@ class ETRSelectingPlatformViewController: UITableViewController {
         cell.configure(model: aModel)
         if aModel.name == selectedPlatform.name {
             cell.accessoryType = .checkmark
-            cell.tintColor = UIColor.orange
+            cell.tintColor = UIColor.lightRed
         }else{
             cell.accessoryType = .none
         }

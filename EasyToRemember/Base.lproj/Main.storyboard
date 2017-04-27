@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rky-WM-yDk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rky-WM-yDk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -85,7 +85,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="容易记" id="ZYU-Lo-On8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FNR-t4-tHR">
-                            <color key="tintColor" red="0.99215686270000003" green="0.65098039220000004" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.91764705882352937" green="0.29019607843137252" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="LNv-jO-aX2" kind="show" id="033-jS-iJm"/>
                             </connections>
@@ -276,6 +276,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="请选择平台" id="buo-pJ-SCx">
                         <barButtonItem key="rightBarButtonItem" title="完成" id="isW-sn-Shb">
+                            <color key="tintColor" red="0.91764705879999997" green="0.2901960784" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="finishAction:" destination="sYX-Pb-5kB" id="ptX-P8-aAk"/>
                             </connections>
@@ -290,12 +291,13 @@
         <scene sceneID="Rjw-VF-TNL">
             <objects>
                 <navigationController id="rky-WM-yDk" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yE9-gf-2P5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yE9-gf-2P5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.99215686270000003" green="0.65098039220000004" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.91764705879999997" green="0.2901960784" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.99215686270000003" green="0.65098039220000004" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.91764705879999997" green="0.2901960784" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>

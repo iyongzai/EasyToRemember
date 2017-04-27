@@ -89,3 +89,17 @@ extension UIColor {
         return UIColor.init(red: CGFloat(arc4random()%(256-124)+124)/255.0, green: CGFloat(arc4random()%(256-124)+124)/255.0, blue: CGFloat(arc4random()%(256-124)+124)/255.0, alpha: 1)
     }
 }
+
+
+
+
+// MARK: - 固定的颜色值
+extension UIColor {
+    static var lightRed: UIColor {
+        return UIColor.init(hexColor: "#ea4a43")
+    }
+    
+    static var lightGrayForBG: UIColor {
+        return UIColor.init(hexColor: "#efeff4")
+    }
+}

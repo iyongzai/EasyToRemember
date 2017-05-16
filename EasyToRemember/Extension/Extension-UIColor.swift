@@ -94,9 +94,10 @@ extension UIColor {
 
 
 // MARK: - 固定的颜色值
+let themeColorString = "#ea4a43"
 extension UIColor {
     static var lightRed: UIColor {
-        return UIColor.init(hexColor: "#ea4a43")
+        return UIColor.init(hexColor: themeColorString)
     }
     
     static var lightGrayForBG: UIColor {

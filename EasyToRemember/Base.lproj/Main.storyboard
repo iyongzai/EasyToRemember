@@ -32,6 +32,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="51.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="记" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1y-0K-jvj">
+                                            <rect key="frame" x="8" y="8" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="KOt-B2-luz"/>
+                                                <constraint firstAttribute="width" constant="35" id="vtL-un-nYm"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_sns_weixin_session" translatesAutoresizingMaskIntoConstraints="NO" id="cmV-Co-BhE">
                                             <rect key="frame" x="8" y="8" width="35" height="35"/>
                                             <constraints>
@@ -63,15 +73,18 @@
                                         <constraint firstItem="OAy-uH-sNU" firstAttribute="trailing" secondItem="h4O-Nl-rep" secondAttribute="trailingMargin" id="EhN-57-qJD"/>
                                         <constraint firstItem="OAy-uH-sNU" firstAttribute="leading" secondItem="cmV-Co-BhE" secondAttribute="trailing" constant="8" id="F2K-6d-VDg"/>
                                         <constraint firstItem="TPh-A8-CV7" firstAttribute="leading" secondItem="cmV-Co-BhE" secondAttribute="trailing" constant="8" id="P3w-88-Ldk"/>
+                                        <constraint firstItem="W1y-0K-jvj" firstAttribute="top" secondItem="h4O-Nl-rep" secondAttribute="topMargin" id="Yh8-T0-pAv"/>
                                         <constraint firstItem="cmV-Co-BhE" firstAttribute="leading" secondItem="h4O-Nl-rep" secondAttribute="leading" constant="8" id="bt8-fp-VXF"/>
                                         <constraint firstItem="OAy-uH-sNU" firstAttribute="top" secondItem="h4O-Nl-rep" secondAttribute="topMargin" id="kR9-Ii-47f"/>
                                         <constraint firstItem="TPh-A8-CV7" firstAttribute="top" secondItem="OAy-uH-sNU" secondAttribute="bottom" id="qrk-z1-TB5"/>
                                         <constraint firstAttribute="trailing" secondItem="TPh-A8-CV7" secondAttribute="trailing" constant="8" id="xYP-p5-EFB"/>
+                                        <constraint firstItem="W1y-0K-jvj" firstAttribute="leading" secondItem="h4O-Nl-rep" secondAttribute="leadingMargin" id="y1L-iC-fok"/>
                                         <constraint firstAttribute="bottom" secondItem="cmV-Co-BhE" secondAttribute="bottom" priority="999" constant="8" id="zIw-6n-RP5"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
+                                    <outlet property="iconLabel" destination="W1y-0K-jvj" id="krT-yZ-Jb9"/>
                                     <outlet property="platformCount" destination="TPh-A8-CV7" id="No0-sq-JhS"/>
                                     <outlet property="platformIcon" destination="cmV-Co-BhE" id="xpP-NM-i5S"/>
                                     <outlet property="platformTitle" destination="OAy-uH-sNU" id="gMK-bQ-cjM"/>
@@ -230,19 +243,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="搜索" id="T0y-tI-6aX">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ETRPlatformCell" id="IoO-UE-sXb" customClass="ETRPlatformCell" customModule="EasyToRemember" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="52"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="52"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IoO-UE-sXb" id="Ugm-ip-FMf">
                                     <rect key="frame" x="0.0" y="0.0" width="336" height="51.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="记" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eY0-Pg-Q6q">
+                                            <rect key="frame" x="8" y="8" width="35" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_sns_weixin_session" translatesAutoresizingMaskIntoConstraints="NO" id="CCe-yl-gtS">
                                             <rect key="frame" x="8" y="8" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="54r-lQ-k7y"/>
                                                 <constraint firstAttribute="width" constant="35" id="RRa-CM-XbT"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="Sio-xv-fdV"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="iCi-2d-Pim"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdg-Mo-4Xu">
@@ -258,14 +285,17 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="wdg-Mo-4Xu" secondAttribute="trailing" constant="8" id="JTw-Oc-iaa"/>
                                         <constraint firstAttribute="bottom" secondItem="CCe-yl-gtS" secondAttribute="bottom" priority="999" constant="8" id="MS6-Wq-nGr"/>
                                         <constraint firstItem="wdg-Mo-4Xu" firstAttribute="height" secondItem="CCe-yl-gtS" secondAttribute="height" id="RwE-el-eu4"/>
+                                        <constraint firstItem="CCe-yl-gtS" firstAttribute="leading" secondItem="Ugm-ip-FMf" secondAttribute="leadingMargin" id="Tka-SO-fER"/>
                                         <constraint firstItem="wdg-Mo-4Xu" firstAttribute="leading" secondItem="CCe-yl-gtS" secondAttribute="trailing" constant="8" id="VPg-VW-E31"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="wdg-Mo-4Xu" secondAttribute="bottom" priority="999" id="oEi-Fl-WjX"/>
+                                        <constraint firstItem="CCe-yl-gtS" firstAttribute="top" secondItem="Ugm-ip-FMf" secondAttribute="topMargin" id="qyp-Yh-0kH"/>
                                         <constraint firstItem="CCe-yl-gtS" firstAttribute="leading" secondItem="Ugm-ip-FMf" secondAttribute="leading" constant="8" id="y6U-pC-RFT"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="icon" destination="CCe-yl-gtS" id="sNr-mU-nfl"/>
+                                    <outlet property="iconLabel" destination="eY0-Pg-Q6q" id="cNR-b7-0NA"/>
                                     <outlet property="nameLabel" destination="wdg-Mo-4Xu" id="MyS-wV-iQb"/>
                                 </connections>
                             </tableViewCell>
@@ -292,7 +322,7 @@
         <scene sceneID="Rjw-VF-TNL">
             <objects>
                 <navigationController id="rky-WM-yDk" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yE9-gf-2P5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yE9-gf-2P5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.91764705879999997" green="0.2901960784" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>

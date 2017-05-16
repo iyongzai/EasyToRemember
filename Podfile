@@ -9,6 +9,13 @@ target 'EasyToRemember' do
     # Swift 里直观的日期处理。
     pod 'Timepiece'
 
+    # 图片缓存
+    # Kingfisher 是一个轻量、纯 Swift 的库，可以从网络中异步下载和缓存图片。
+    pod 'Kingfisher'
+    
+    # SwiftyJSON：最为开发者认可的JSON解析类 - SwiftyJSON/SwiftyJSON · GitHub
+    pod 'SwiftyJSON'
+
 
 end
 

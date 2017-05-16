@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-EasyToRemember.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Timepiece.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>471E2B59BE0EFF9C24D4ABECCBCB0355</key>
+		<key>156FBA86EF93603FF4E5C06663784EC8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>654E5DF0CA1439445289BB0C60E35918</key>
+		<key>408780791D7D9521E99F2302A2850CA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>86347FBEC6FB6C686071FC75CE590286</key>
+		<key>4DB4922F82C86353765E71749734539B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FA4DF84391707CD26246E30090083A56</key>
+		<key>5E0EC0E6A71CF756E1C3F6B98A31A70F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B0A84549579F4A70D3DE7707806CD420</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4944FEC314D1A66588651D006273ADE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

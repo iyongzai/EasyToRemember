@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ETRSelectingPlatformViewController: UITableViewController {
     
@@ -15,19 +16,28 @@ class ETRSelectingPlatformViewController: UITableViewController {
     fileprivate var platforms = [PlatformModel]()
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        let platformModel1 = PlatformModel().configure(name: "微信", icon: "icon_sns_weixin_session", userName: "", password: "", createAt: nil)
-        
-        let platformModel2 = PlatformModel().configure(name: "微博", icon: "icon_sns_weibo", userName: "", password: "", createAt: nil)
-        let platformModel3 = PlatformModel().configure(name: "QQ", icon: "icon_sns_qq", userName: "", password: "", createAt: nil)
-        platforms.append(contentsOf: [platformModel1, platformModel2, platformModel3])
+        super.viewDidLoad()        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if platforms.count == 0 {
+            if let jsonString = try? String.init(contentsOfFile: Bundle.main.path(forResource: "PlatformIcon", ofType: "json")!) {
+                let aJSON = JSON.init(parseJSON: jsonString)
+                var indexPaths = [IndexPath]()
+                var index = 0
+                (aJSON.arrayObject as? [[String:String]])?.forEach({ (dic) in
+                    let aIcon = Icon.model(dic: dic)
+                    let aPlatformModel = PlatformModel().configure(name: aIcon.text, icon: aIcon, userName: "", password: "", createAt: nil)
+                    platforms.append(aPlatformModel)
+                    indexPaths.append(IndexPath.init(row: index, section: 0))
+                    index += 1
+                })
+                if indexPaths.count > 0 {
+                    tableView.insertRows(at: indexPaths, with: .automatic)
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,0 +1,5 @@
+ [
+  {"color" : "#ea4a43", "text" : "微信", "fileName" : "icon_sns_weixin_session", "url" : ""},
+  {"color" : "#ea4a43", "text" : "微博", "fileName" : "icon_sns_weibo", "url" : ""},
+  {"color" : "#ea4a43", "text" : "QQ", "fileName" : "icon_sns_qq", "url" : ""}
+  ]
